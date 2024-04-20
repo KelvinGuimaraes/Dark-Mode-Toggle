@@ -1,0 +1,98 @@
+
+:root {
+  /* Definindo variáveis de cor */
+  --dark-bg: #212121;
+  --light-bg: #ccc;
+  --light-text: #212121;
+  --dark-text: #ccc;
+  --ind-bg: #000;
+  --ind-dark-bg: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.5s;
+  background-color: var(--dark-bg); /* Usando variável de cor */
+}
+
+h1 {
+  color: var(--dark-text); /* Usando variável de cor */
+}
+
+.Moon, .Sun {
+  /* Agrupando propriedades comuns em .Moon e .Sun */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.Moon {
+  color: #000;
+  margin-left: auto; /* Empurrando para a direita usando margem automática */
+  margin-right: 10px; /* Adicionando margem à direita para separação */
+}
+
+.Sun {
+  color: #fff;
+  margin-right: auto; /* Empurrando para a esquerda usando margem automática */
+  margin-left: 5.9rem; /* Adicionando margem à esquerda para separação */
+}
+
+.tri {
+  width: 200px;
+  height: 80px;
+  background: linear-gradient(
+    rgb(215, 217, 220),
+    rgb(182, 196, 200),
+    rgb(149, 175, 181),
+    rgb(116, 154, 162),
+    rgb(82, 134, 144)
+  );
+  border-radius: 150px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between; /* Alinhando os itens nas extremidades */
+  align-items: center;
+}
+
+.tri .ind {
+  width: 80px;
+  height: 80px;
+  background-color: var(--ind-bg); /* Usando variável de cor */
+  border-radius: 50%;
+  transform: scale(0.9);
+  position: absolute;
+  left: 0;
+  transition: 0.5s;
+}
+
+.tri.dark {
+  background-color: #c3c3c3cc;
+}
+
+.tri.dark .ind {
+  left: 120px;
+  background-color: var(--ind-dark-bg); /* Usando variável de cor */
+}
+
+body.dark {
+  background-color: var(--light-bg); /* Usando variável de cor */
+}
+
+body.dark h1 {
+  color: var(--light-text); /* Usando variável de cor */
+}

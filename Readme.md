@@ -18,6 +18,7 @@ Este é um simples projeto que demonstra como implementar um botão de alternân
 1. Faça o clone deste repositório para o seu computador usando: 
 
 `git clone https://github.com/KelvinGuimaraes/Dark-Mode-Toggle.git`
+
 2. Abra o arquivo `index.html` em um navegador da web.
 3. Clique no ícone do sol para alternar para o modo claro ou no ícone da lua para alternar para o modo escuro.
 
